@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Calculadora de Matrices*/
+
+@theme {
+  --color-*: initial;
+  
+  /* Fondos y texto */
+  --color-background: #FFFBDE;
+  --color-foreground: #096B68;
+  
+  /* Tarjetas y ventanas emergentes */
+  --color-card: #FFFFFF;
+  --color-card-foreground: #096B68;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #096B68;
+
+  /* Color primario: Verde azulado medio - botones principales */
+  --color-primary: #129990;
+  --color-primary-hover: #0F7F77;
+  --color-primary-foreground: #FFFFFF;
+
+  /* Secundario: Menta claro - elementos secundarios */
+  --color-secondary: #90D1CA;
+  --color-secondary-foreground: #096B68;
+
+  /* Atenuado: Para elementos con menor énfasis */
+  --color-muted: #E8F5F3;
+  --color-muted-foreground: #5A9A96;
+
+  /* Acento: Destacados y estados hover */
+  --color-accent: #90D1CA;
+  --color-accent-foreground: #096B68;
+
+  /* Advertencia de errores: matriz singular, operación inválida */
+  --color-destructive: #DC2626;
+  --color-destructive-foreground: #FFFFFF;
+
+  /* Bordes y campos de entrada */
+  --color-border: #90D1CA;
+  --color-input: #E8F5F3;
+  --color-ring: #129990;
+
+  /* Oscuro: Para texto importante */
+  --color-dark: #096B68;
+
+  /* Tokens de radio de borde */
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  /* Tipografía */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Estilos base globales */
+*,
+::after,
+::before {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
