@@ -6,25 +6,21 @@ import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider
-      style={{
-        "--sidebar-width": "calc(var(--spacing) * 72)",
-        "--header-height": "calc(var(--spacing) * 12)",
-      } as React.CSSProperties}
+      style={
+        {
+          "--sidebar-width": "18rem",
+          "--header-height": "3rem",
+        } as React.CSSProperties
+      }
     >
-      <AppSidebar />
- <SidebarInset
-  className="
-    flex min-h-screen flex-col
-    md:peer-data-[state=expanded]:pl-(--sidebar-width)
-    md:peer-data-[state=collapsed]:pl-(--sidebar-width-icon)
-  "
->
-
-        <AppHeader />
-        <main className="flex-1 overflow-y-auto p-4">
-          {children}
-        </main>
-      </SidebarInset>
+      <div className="flex min-h-screen w-full">
+        <AppSidebar />
+        <SidebarInset className="flex flex-1 flex-col min-w-0 w-0">
+          <AppHeader />
+          <main className="flex-1 overflow-y-auto">{children}</main>
+        </SidebarInset>
+      </div>
     </SidebarProvider>
+
   )
 }
